@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.foodworld.Adapter.PopularAdapter
 import com.example.foodworld.R
 import com.example.foodworld.databinding.FragmentHomeBinding
 import com.google.android.material.slider.Slider
@@ -32,9 +36,27 @@ class HomeFragment : Fragment() {
         val imgSlider = binding.imageSlider
         imgSlider.setImageList(imagelist)
         imgSlider.setImageList(imagelist,ScaleTypes.FIT)
+        imgSlider.setItemClickListener(object : ItemClickListener{
+            override fun doubleClick(position: Int) {}
+            override fun onItemSelected(position: Int) {
+                val itemPosition = imagelist[position]
+                val itemMessage = "Selected Image $position"
+                Toast.makeText(requireContext(),itemMessage,Toast.LENGTH_LONG).show()
+            }
+        })
+
+        val item = listOf("Burger","sandwich","mom","item")
+        val price = listOf("₹100","₹500","₹200","₹50")
+        val img = listOf(
+            R.drawable.menu1,
+            R.drawable.menu2,
+            R.drawable.menu3,
+            R.drawable.menu4,
+        )
+        val adapter = PopularAdapter(item,img,price)
+        binding.menuRv.layoutManager = LinearLayoutManager(requireContext())
+        binding.menuRv.adapter = adapter
         return binding.root
-
-
     }
 
     companion object {
