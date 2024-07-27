@@ -13,7 +13,7 @@ import com.denzcoskun.imageslider.models.SlideModel
 import com.example.foodworld.Adapter.PopularAdapter
 import com.example.foodworld.R
 import com.example.foodworld.databinding.FragmentHomeBinding
-import com.google.android.material.slider.Slider
+
 
 class HomeFragment : Fragment() {
  lateinit var binding: FragmentHomeBinding
@@ -53,9 +53,13 @@ class HomeFragment : Fragment() {
             R.drawable.menu3,
             R.drawable.menu4,
         )
-        val adapter = PopularAdapter(item,img,price)
+        val adapter = PopularAdapter(ArrayList(item),ArrayList(img),ArrayList(price))
         binding.menuRv.layoutManager = LinearLayoutManager(requireContext())
         binding.menuRv.adapter = adapter
+        binding.viewAllMenu.setOnClickListener {
+            val bottomSheetDialog = MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"test")
+        }
         return binding.root
     }
 

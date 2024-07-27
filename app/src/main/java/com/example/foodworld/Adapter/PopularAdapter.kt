@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodworld.databinding.MenuItemsBinding
 
-class PopularAdapter(private val Items : List<String> , private  val  Image:List<Int>, private val Price : List<String>) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
+class PopularAdapter(private val Items : MutableList<String> , private  val  Image:MutableList<Int>, private val Price : MutableList<String>) : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
