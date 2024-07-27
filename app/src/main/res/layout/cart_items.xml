@@ -43,41 +43,64 @@
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/foodImg"
+                app:layout_constraintBottom_toTopOf="@+id/foodPrice"
                 app:layout_constraintStart_toEndOf="@+id/foodImg"
-                app:layout_constraintTop_toTopOf="@+id/foodImg"
-                app:layout_constraintVertical_bias="0.487" />
+                app:layout_constraintTop_toTopOf="@+id/foodImg" />
 
             <TextView
                 android:id="@+id/foodPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
                 android:text="₹100.0"
-                android:textAlignment="center"
                 android:textColor="@color/Green"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/add_to_cart"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/foodImg"
+                app:layout_constraintEnd_toEndOf="@+id/foodName"
+                app:layout_constraintStart_toStartOf="@+id/foodName" />
+
+            <ImageButton
+                android:id="@+id/subBtn"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/gree_button"
+                app:layout_constraintStart_toEndOf="@+id/foodName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/subr" />
 
             <TextView
-                android:id="@+id/add_to_cart"
+                android:id="@+id/cartQuantities"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="10"
+                app:layout_constraintBottom_toBottomOf="@+id/addBtn"
+                app:layout_constraintEnd_toStartOf="@+id/addBtn"
+                app:layout_constraintStart_toEndOf="@+id/subBtn"
+                app:layout_constraintTop_toTopOf="@+id/subBtn" />
+
+            <ImageButton
+                android:id="@+id/addBtn"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/gree_button"
-                android:padding="5dp"
-                android:text="@string/add_to_cart"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/foodName"
-                app:layout_constraintTop_toBottomOf="@+id/foodPrice"
-                app:layout_constraintVertical_bias="0.238" />
+                app:layout_constraintTop_toTopOf="@+id/subBtn"
+                app:srcCompat="@drawable/add" />
+
+            <ImageButton
+                android:id="@+id/deletBtn"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cartQuantities"
+                app:layout_constraintStart_toStartOf="@+id/cartQuantities"
+                app:layout_constraintTop_toBottomOf="@+id/cartQuantities"
+                app:srcCompat="@drawable/delet" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
