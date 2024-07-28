@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.foodworld.R
+import com.example.foodworld.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {
-
+private  lateinit var binding: FragmentUserBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -19,7 +20,8 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user, container, false)
+        binding = FragmentUserBinding.inflate(layoutInflater,container, false)
+        return binding.root
     }
 
     companion object {

@@ -86,7 +86,6 @@ class CartAdapter(private val Items: MutableList<String>,private val Price : Mut
             Image.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position,Items.size)
-
         }
     }
 }
