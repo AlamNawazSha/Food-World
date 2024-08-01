@@ -1,4 +1,4 @@
-package com.example.foodworld.Adapter
+package com.example.foodworld.UserApp.Activity.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodworld.databinding.HistoryPreviousItemsBinding
 
 class HistoryAdapter(private val historyFoodName : ArrayList<String>,private val historyFoodPrice : ArrayList<String>,private val historyFoodImg : ArrayList<Int>):RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryAdapter.HistoryViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
         return HistoryViewHolder(HistoryPreviousItemsBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
-    override fun onBindViewHolder(holder: HistoryAdapter.HistoryViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
         holder.bind(position)
     }
 

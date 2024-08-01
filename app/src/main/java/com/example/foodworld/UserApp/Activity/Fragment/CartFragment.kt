@@ -1,22 +1,21 @@
-package com.example.foodworld.Fragment
+package com.example.foodworld.UserApp.Activity.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.foodworld.Adapter.HistoryAdapter
+import com.example.foodworld.UserApp.Activity.Adapter.CartAdapter
 import com.example.foodworld.R
+import com.example.foodworld.UserApp.Activity.PaymentActivity
 import com.example.foodworld.databinding.FragmentCartBinding
-import com.example.foodworld.databinding.FragmentHistoryBinding
 
-class HistoryFragment : Fragment() {
-private lateinit var binding: FragmentHistoryBinding
-
+class CartFragment : Fragment() {
+lateinit var binding: FragmentCartBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -24,8 +23,7 @@ private lateinit var binding: FragmentHistoryBinding
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-      binding = FragmentHistoryBinding.inflate(layoutInflater,container,false)
-
+        binding = FragmentCartBinding.inflate(inflater,container,false)
         val item = listOf("Burger","sandwich","mom","item")
         val price = listOf("₹100","₹500","₹200","₹50")
         val img = listOf(
@@ -35,12 +33,18 @@ private lateinit var binding: FragmentHistoryBinding
             R.drawable.menu4,
         )
 
-        val adapter = HistoryAdapter(ArrayList(item), ArrayList(price), ArrayList(img))
-        binding.historyPreviouslyBuyRv.layoutManager = LinearLayoutManager(requireContext())
-        binding.historyPreviouslyBuyRv.adapter =adapter
+        val adapter = CartAdapter(ArrayList(item),ArrayList(price),ArrayList(img))
+        binding.cartRv.layoutManager = LinearLayoutManager(requireContext())
+        binding.cartRv.adapter = adapter
+
+        binding.proceedBtn.setOnClickListener {
+            startActivity(Intent(context,PaymentActivity::class.java))
+        }
         return binding.root
+
     }
 
     companion object {
+
     }
 }

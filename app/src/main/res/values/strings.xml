@@ -36,4 +36,8 @@
     <string name="address">Address</string>
     <string name="email">Email</string>
     <string name="phone_number">Phone Number</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
+    <string name="congrats_n_your_order_placed">Congrats \n Your Order Placed</string>
+    <string name="go_home">Go Home</string>
 </resources>

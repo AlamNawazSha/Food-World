@@ -1,4 +1,4 @@
-package com.example.foodworld
+package com.example.foodworld.UserApp.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.foodworld.R
 import com.example.foodworld.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -21,11 +22,11 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
         binding.DontHaveAcc.setOnClickListener {
-            val intent = Intent(this,SingUpActivity::class.java)
+            val intent = Intent(this, SingUpActivity::class.java)
             startActivity(intent)
         }
         binding.LoginBtn.setOnClickListener {
-            val intent = Intent(this,SingUpActivity::class.java)
+            val intent = Intent(this, SingUpActivity::class.java)
             startActivity(intent)
         }
     }

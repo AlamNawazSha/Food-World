@@ -1,11 +1,11 @@
-package com.example.foodworld.Fragment
+package com.example.foodworld.UserApp.Activity.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.foodworld.Adapter.PopularAdapter
+import com.example.foodworld.UserApp.Activity.Adapter.PopularAdapter
 import com.example.foodworld.R
 import com.example.foodworld.databinding.FragmentMenuBootomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

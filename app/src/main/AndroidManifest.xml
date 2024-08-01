@@ -13,24 +13,28 @@
         android:theme="@style/Theme.FoodWorld"
         tools:targetApi="31">
         <activity
-            android:name=".Choose_location_Activity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name=".SingUpActivity"
+            android:name=".UserApp.Activity.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".UserApp.Activity.MenuDeatial"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".UserApp.Activity.Choose_location_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".UserApp.Activity.SingUpActivity"
             android:exported="false" />
         <activity
-            android:name=".splashScreen"
-            android:exported="true">
-        </activity>
+            android:name=".UserApp.Activity.LoginActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UserApp.Activity.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserApp.Activity.splashScreen"
+            android:exported="true" />
+        <activity
+            android:name=".UserApp.Activity.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>

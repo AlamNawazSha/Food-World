@@ -1,4 +1,4 @@
-package com.example.foodworld.Fragment
+package com.example.foodworld.UserApp.Activity.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
