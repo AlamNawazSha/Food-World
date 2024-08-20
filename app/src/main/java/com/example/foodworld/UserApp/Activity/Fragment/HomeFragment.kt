@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
             R.drawable.menu3,
             R.drawable.menu4,
         )
-        val adapter = PopularAdapter(ArrayList(item),ArrayList(img),ArrayList(price))
+        val adapter = PopularAdapter(ArrayList(item),ArrayList(img),ArrayList(price),requireContext())
         binding.menuRv.layoutManager = LinearLayoutManager(requireContext())
         binding.menuRv.adapter = adapter
         binding.viewAllMenu.setOnClickListener {

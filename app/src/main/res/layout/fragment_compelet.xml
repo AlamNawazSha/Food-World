@@ -33,25 +33,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
         android:contentDescription="@string/image"
         android:src="@drawable/complet"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/goHomeBtn"
-        android:layout_width="157dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/gree_button"
-        android:text="@string/go_home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.358"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

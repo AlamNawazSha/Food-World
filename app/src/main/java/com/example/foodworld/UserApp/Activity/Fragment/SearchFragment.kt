@@ -34,7 +34,7 @@ private val searchFoodName = listOf("Burger","sandwich","mom","item")
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSearchBinding.inflate(inflater,container,false)
-        adapter = PopularAdapter(filterFoodName,filterFoodImg,filterFoodPrice)
+        adapter = PopularAdapter(filterFoodName,filterFoodImg,filterFoodPrice,requireContext())
         binding.searchRv.layoutManager = LinearLayoutManager(requireContext())
         binding.searchRv.adapter = adapter
         setupSearchView()

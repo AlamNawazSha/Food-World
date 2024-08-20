@@ -21,9 +21,7 @@ private lateinit var binding: FragmentCompeletBinding
     ): View? {
         // Inflate the layout for this fragment
   binding = FragmentCompeletBinding.inflate(inflater,container,false)
-        binding.goHomeBtn.setOnClickListener {
-            dismiss()
-        }
+
         return binding.root
     }
 

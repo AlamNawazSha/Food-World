@@ -30,7 +30,7 @@ private lateinit var binding : FragmentMenuBootomSheetBinding
             R.drawable.menu3,
             R.drawable.menu4,
         )
-        val adapter = PopularAdapter(ArrayList(item),ArrayList(img),ArrayList(price))
+        val adapter = PopularAdapter(ArrayList(item),ArrayList(img),ArrayList(price),requireContext())
         binding.viewMenuRv.layoutManager = LinearLayoutManager(requireContext())
         binding.viewMenuRv.adapter = adapter
         binding.backbtn.setOnClickListener {

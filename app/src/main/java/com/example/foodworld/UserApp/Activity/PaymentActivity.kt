@@ -2,6 +2,8 @@ package com.example.foodworld.UserApp.Activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +20,7 @@ class PaymentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val name = binding.paymnetName
         val address = binding.paymnetAddress
         val phoneNumber = binding.paymnetNumber
@@ -29,10 +32,15 @@ class PaymentActivity : AppCompatActivity() {
                 val dialog = CompeletFragment()
                 dialog.show(supportFragmentManager, "Test")
 
+                Handler(Looper.getMainLooper()).postDelayed({
+                    finish()
+                },2000)
+
             }
     }
         binding.paymentBackBtn.setOnClickListener {
             finish()
         }
         }
+
     }
